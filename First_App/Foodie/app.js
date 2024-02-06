@@ -43,7 +43,6 @@ const Header = () => {
 const RestaurantCard = (props) => {
   const { resData } = props; 
   const { name, cuisines, avgRating, costForTwo, sla } = resData?.info;
-  console.log(props);
   return (
     <div
       className="res-card"
@@ -697,7 +696,7 @@ const Body = () => {
       <div className="search-bar">Search</div>
       <div className="res-container">
         {resList.map((restaurant) => (
-          <RestaurantCard resData={restaurant} />
+          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
 
         {/* <RestaurantCard resData={resList[0]} />
