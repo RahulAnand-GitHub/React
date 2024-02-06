@@ -1,0 +1,79 @@
+.header {
+  width: auto;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+.logo {
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+}
+.nav-items {
+  padding: 0 20px;
+}
+.nav-items > ul {
+  font-size: 20px;
+  display: flex;
+  list-style-type: none;
+}
+.nav-items > ul > li {
+  margin: 10px;
+  padding: 10px;
+}
+.company-name {
+  font-family: "Honk", system-ui;
+  font-family: "Poppins", sans-serif;
+}
+#letters {
+  font-size: 50px;
+}
+.f {
+  color: rgb(239, 140, 48);
+}
+.o1 {
+  color: rgb(129, 203, 50);
+}
+.o2 {
+  color: rgb(245, 49, 49);
+}
+.d {
+  color: rgb(251, 150, 41);
+}
+.i {
+  color: rgb(82, 178, 230);
+}
+.e {
+  color: rgb(249, 201, 57);
+}
+.search {
+  padding: 10px;
+}
+.res-container {
+  display: flex;
+  /* justify-content: space-betwee; */
+  flex-wrap: wrap;
+}
+
+.res-card {
+  /* text-align: center; */
+  margin: 5px;
+  padding: 5px;
+  width: 200px;
+}
+.res-card > h3 {
+  text-align: center;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.restaurant-logo {
+  /* object-fit: contain; */
+  height: 45%;
+  width: 100%;
+}
