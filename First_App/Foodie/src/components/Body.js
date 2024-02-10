@@ -6,6 +6,7 @@ const Body = () => {
   // Local State variable - super powerful variable.
   const [listOfVariables, setListOfVariables] = useState([]);
   const [searchText, setSearchText] = useState(" ");
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -19,12 +20,14 @@ const Body = () => {
     setListOfVariables(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    setFilteredRestaurant(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   if (listOfVariables.length === 0) {
     return <Shimmer />;
   }
-  console.log("Rahul");
   return listOfVariables.length === 0 ? (
     <Shimmer />
   ) : (
@@ -47,7 +50,7 @@ const Body = () => {
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
 
-              setListOfVariables(filteredRestaurant);
+              setFilteredRestaurant(filteredRestaurant);
             }}
           >
             Search
@@ -66,7 +69,7 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {listOfVariables.map((restaurant) => (
+        {filteredRestaurant.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
