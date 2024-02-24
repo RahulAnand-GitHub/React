@@ -103,3 +103,27 @@
 .filter {
   display: flex;
 }
+
+.user-card {
+  width: 19rem;
+  padding: 10px 15px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-image {
+  margin: 20px;
+  height: 10em;
+  width: 10em;
+  border-radius: 50%;
+}
+.user-card-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-details {
+  text-align: center;
+}
