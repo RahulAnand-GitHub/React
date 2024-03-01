@@ -11,51 +11,51 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
+    <div className="flex justify-between bg-pink-100 shadow-lg mb-2">
       <div className="logo-container">
         <Link to="/">
-          <img className="logo" src={LOGO_URL}></img>
+          <img className="w-20  m-4 mix-blend-multiply" src={LOGO_URL}></img>
         </Link>
       </div>
       <Link to="/">
-        <div className="company-name">
-          <span id="letters" className="f">
+        <div className="text-4xl font-extrabold p-4 m-4">
+          <span id="letters" className="text-f">
             F
           </span>
-          <span id="letters" className="o1">
+          <span id="letters" className="text-o1">
             O
           </span>
-          <span id="letters" className="o2">
+          <span id="letters" className="text-o2">
             O
           </span>
-          <span id="letters" className="d">
+          <span id="letters" className="text-d">
             D
           </span>
-          <span id="letters" className="i">
+          <span id="letters" className="text-i">
             I
           </span>
-          <span id="letters" className="e">
+          <span id="letters" className="text-e">
             E
           </span>
         </div>
       </Link>
 
-      <div className="nav-items">
-        <ul>
-          <li>{onlineStatus ? "🟢" : "🔴"}</li>
-          <li>
+      <div className="flex items-center ">
+        <ul className="flex m-4 p-4">
+          <li className="px-4">{onlineStatus ? "🟢" : "🔴"}</li>
+          <li className="px-4">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/about">About Us</Link>
           </li>
-          <li>Cart</li>
+          <li className="px-4">Cart</li>
           <button
             className="login-btn"
             onClick={() => {
