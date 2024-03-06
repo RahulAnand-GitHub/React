@@ -1,0 +1,11 @@
+{
+  "name": "netflix-gpt",
+  "version": "1.0.0",
+  "description": "A netflix app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Rahul Anand",
+  "license": "ISC"
+}
